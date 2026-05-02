@@ -58,7 +58,7 @@
         .logo-circle {
             width: 45px;
             height: 45px;
-            background: white;
+            background: transparent;
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -573,9 +573,9 @@ gap: 20px;
     <nav class="navbar">
   <div class="nav-container">
             <div class="logo">
-                <div class="logo-circle" style="overflow:hidden; padding:0;">
-    <img src="logo-hmi-kom.png" style="width:100%; height:100%; object-fit:cover;">
-</div>
+                <div class="logo-circle">
+    <img src="logo-hmi-kom.png" style="width:100%; height:100%; object-fit:contain; background: transparent;" />
+ </div>
                 <span>HMI Olahraga UNESA</span>
             </div>
             <ul class="nav-menu" id="navMenu">
