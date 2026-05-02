@@ -580,30 +580,39 @@ h1, h2, h3, .logo, .section-title, .stat-number, .btn {
 
         /* Responsive */
         @media (max-width: 768px) {
-    .hero h1 {
-        font-size: 32px;
+    .menu-toggle {
+        display: block;
     }
 
-    .hero .subtitle {
-        font-size: 16px;
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--primary);
+        flex-direction: column;
+        gap: 0;
+        padding: 10px 0;
+        border-top: 1px solid rgba(255,255,255,0.12);
     }
 
-    .section-title {
-        font-size: 28px;
+    .nav-menu.active {
+        display: flex;
     }
 
-    .section-subtitle {
-        font-size: 16px;
+    .nav-menu li {
+        width: 100%;
     }
 
-    .program-body h3,
-    .event-body h3,
-    .about-content h3 {
-        font-size: 20px;
+    .nav-menu a {
+        display: block;
+        padding: 14px 20px;
+        width: 100%;
     }
 
-    .stat-number {
-        font-size: 30px;
+    .nav-container {
+        position: relative;
     }
 }
     </style>
@@ -611,22 +620,25 @@ h1, h2, h3, .logo, .section-title, .stat-number, .btn {
 <body>
     <!-- Navbar -->
     <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo">
-                <div class="logo-circle" style="overflow:hidden; padding:0;">
-    <img src="logo-hmi-kom.png" style="width:100%; height:100%; object-fit:cover;">
-</div>
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="#home">Beranda</a></li>
-                <li><a href="#about">Tentang</a></li>
-                <li><a href="#programs">Program</a></li>
-                <li><a href="#structure">Struktur</a></li>
-                <li><a href="#events">Kegiatan</a></li>
-                <li><a href="#contact">Kontak</a></li>
-            </ul>
-            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-        </div>
-    </nav>
+  <div class="nav-container">
+    <a href="#home" class="logo">
+      <div class="logo-circle">
+        <img src="logo-hmi-kom.png" alt="Logo HMI Olahraga UNESA">
+      </div>
+    </a>
+
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="#home">Beranda</a></li>
+      <li><a href="#about">Tentang</a></li>
+      <li><a href="#programs">Program</a></li>
+      <li><a href="#structure">Struktur</a></li>
+      <li><a href="#events">Kegiatan</a></li>
+      <li><a href="#contact">Kontak</a></li>
+    </ul>
+
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+  </div>
+</nav>
 
     <!-- Hero -->
     <section class="hero" id="home">
